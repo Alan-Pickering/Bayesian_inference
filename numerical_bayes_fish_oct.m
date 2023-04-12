@@ -55,7 +55,7 @@ clear variables;
 
 %values for integration
 %for Bogacz model 1 set bog_or_fish = 1; =2 for fish model
-bog_or_fish=1;
+bog_or_fish=2;
 if bog_or_fish==1
     %food size example from Bogacz 2017
     MINV = 0.01; % minimum value of v for which posterior computed
@@ -77,7 +77,8 @@ elseif bog_or_fish==2
     u = 1.5; %observed wait to first bite in minutes, try diff values in range 1-45
 end
 
-fxntype=3; %-1; %this chooses the fxn g(v) that drives the value of u
+%use 3 or -1 for fishing
+fxntype=-1; %3; %this chooses the fxn g(v) that drives the value of u
 if bog_or_fish==1
     fxntype=2; %this is the function that Bogacz used
 end
@@ -107,7 +108,7 @@ if fxnplot==1
     %ax.FontSize = 12; %set axis font size
     if bog_or_fish==1
         xlabel('v=Radius of spherical food pellet','FontSize',16); %make label font bigger
-        ylabel('u=Estimate of light intensity (arbitray units)','FontSize',16);
+        ylabel('u=Estimate of light intensity (arbitrary units)','FontSize',16);
     elseif bog_or_fish==2
         xlabel('v=Number of fish available to be caught','FontSize',16); %make label font bigger
         ylabel('u=Estimate of time to first bite (mins)','FontSize',16);
