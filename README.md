@@ -8,4 +8,4 @@ This version calls the bespoke function <b>gfxn.m</b> <br>
 However this model has a couple of features which are really naff and so an improved version <br>
 will be posted here shortly. The revised version has this accompanying blog post:-<br>
 {blog link here}<br>
-{details of new code go here}<br>
+The new code runs under either Octave or Matlab and is <b>Bayes_fish_oct_new.m</b><br>
