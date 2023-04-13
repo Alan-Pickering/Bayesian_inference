@@ -78,7 +78,7 @@ elseif bog_or_fish==2
 end
 
 %use 3 or -1 for fishing
-fxntype=-1; %3; %this chooses the fxn g(v) that drives the value of u
+fxntype=3; %-1; %this chooses the fxn g(v) that drives the value of u
 if bog_or_fish==1
     fxntype=2; %this is the function that Bogacz used
 end
@@ -95,8 +95,9 @@ elseif fxntype==2
     meanu_fromv=gfxn(vrange, [ ], fxntype);
 elseif fxntype==3
     %a non-linearly decreasing function u=M/(v+1);
-    %meanu_fromv=MAXV.*gfxn(vrange+1, MAXV, fxntype); %+1 used to avoid infinite values
-    meanu_fromv=gfxn(vrange+1, MAXV, fxntype); %+1 used to avoid infinite values
+    %meanu_fromv=MAXV.*gfxn(vrange+1, MAXV, fxntype);
+    %+1 used to avoid infinite values when v=0
+    meanu_fromv=gfxn(vrange, MAXV, fxntype);
 end
 
 fxnplot=1; %1=plot the function first, 0 do not
