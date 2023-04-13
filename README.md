@@ -9,5 +9,5 @@ The Octave compatible version has more detailed commenting than the Matlab only 
 However this code implements a model which has a couple of features that are really naff, <br>
 and so an improved version of the model has been created. <br>
 The revised version of the model relates to this accompanying blog post:-<br>
-{blog link here when published}<br>
+https://samplingdistribution.blogspot.com/2023/04/fixing-really-ugly-model-post-script-to.html <br>
 The new code runs under either Octave or Matlab and is called <b>Bayes_fish_oct_new.m</b><br>
